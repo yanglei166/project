@@ -1,0 +1,52 @@
+@import "module/base.scss";
+@import "module/header.scss";
+@import "module/footer.scss";
+@import "module/shopItem.scss";
+body{
+    overflow: auto;
+    main{
+        min-width: 1280px;
+        margin-top: 120px;
+       .name{font-size: 28px;font-weight: 700;line-height: 1;float: left;margin-right: 20px;}
+    .h1{
+        width: 1092px;
+        height: 380px;
+        margin: 0 auto;
+        display: flex;
+    }
+    .h1 .left{
+    width:224px;height:380px;background: url(../img/5.jpg);
+    }
+    .h1 .middle{ width:626px;height:380px;border-right:1px solid #f4f0ea; }
+    .h1 .middle .top{ width:588px;height:55px;margin: 0 auto;border-bottom: 1px solid #f4f0ea;}
+    .h1 .middle .top .lt {font-size: 16px;float: left;margin-top: 25px;}
+    .h1 .middle .top .lt1{font-size: 12px;float: right;margin-top: 25px;cursor: pointer;margin-left: 20px;}
+    .h1 .middle .top span{float: right; padding-left: 300px;}
+    .h1 .middle .bo1{width:608px;height:300px;margin-top: 25px;display: flex;flex-wrap: wrap;justify-content: space-around;}
+
+    .h1 .middle .bo1 .item{width: 284px;height: 130px;}
+    .h1 .middle .bo1 .item .b1{width:130px ;height:130px;float: left;background: #fbf9f6;}
+    .h1 .middle .bo1 .item .b2{width:130px ;height:130px;float: left;margin-left: 10px;}
+    .h1 .middle .bo1 .item .b2 .b3{max-width: 130px;max-height: 40px;overflow: hidden;margin-top: 8px;
+font-size: 14px;
+line-height: 20px;}
+.h1 .middle .bo1 .item .b2 .b4{color: #BE4141;margin-top: 4px;}
+.h1 .middle .bo1 .item .b2 .b5{font-size: 12px;font-family: "Microsoft Yahei","微软雅黑",verdana;opacity: 0.3;}
+.h1 .middle .bo1 .item .b2 .b6:hover{opacity: 0.5;}
+.h1 .middle .bo1 .item .b2 .b6{width:90px ;height:28px;background: #be4141;margin-top: 5px;} 
+.h1 .middle .bo1 .item .b2 .b6 span{float: left; color: #ffffff;margin: 5px 18px;font-size: 12px;}
+.h1 .right{width:243px;height:380px;}
+.h1 .right .b7 .b7-top{width:242px;height:55px;}
+.h1 .right .b7 .b7-top .lt{font-size: 16px;float: left;margin-left: 20px;margin-top: 24px;color: #333;}
+.h1 .right .b7 .b7-top span{float:right;margin-top: 24px;margin-right: 20px;font-size: 12px;cursor: pointer;}
+.h1 .right .b7 .b7-top span:hover{color: #f4f0ea;}
+.h1 .right .b7 .b7-bottom{width:242px ;height:50px;margin:10px auto ;}
+.h1 .right .b7 .b7-bottom .b8{width:50px ;height:50px ;float: left;margin-left: 20px;}
+.h1 .right .b7 .b7-bottom .b9{width:144px ;height: 50px;float: left;}
+.h1 .right .b7 .b7-bottom .b9 .b91{font-size: 14px;margin-left: 14px;}
+.h1 .right .b7 .b7-bottom .b9 span{color: #BE4141;font-size: 14px;margin-left: 14px;}
+.h1 .right .b7 .b7-bottom .b9 .cart-salecart{width: 24px;height: 24px;background: red;display: inline-block;margin-left: 69px;background: url(../img/spirt.png) no-repeat;}
+.shopItem{height: 400px;}
+        
+    }
+}

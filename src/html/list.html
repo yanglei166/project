@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>商品列表-英雄联盟周边商城</title>
+    <link rel="stylesheet" href="/css/list.css">
+    <link rel="stylesheet" href="/lib/font/iconfont.css">
+</head>
+<body>
+    <!-- header容器 -->
+    <header id="header-container"></header>
+    <main>
+        <!-- 导航标题 -->
+          <h3 class="name">福利社</h3>
+  <div class="h1">
+                <div class="left"></div>
+                <div class="middle">
+                    <div class="top"><div class="lt f-fl">今日特价</div><div class="lt1"><span>查看更多&nbsp;&gt;</span></div></div>
+                    <div class="bo1">
+                      <div class="item">
+                          <div class="b1"><img src="../img/a1.png"/></div>
+                          <div class="b2">
+                            <div class="b3">日式和风声波式便携电动牙刷</div>
+                            <div class="b4">限时价 ¥ 159</div>
+                            <div class="b5">原价¥199</div>
+                            <div class="b6"><a href="detail.html"><span>立即抢购</span></a></div>
+                          </div>
+                    </div>
+                    <div class="item">
+                            <div class="b1"><img src="../img/a2.png"/></div>
+                            <div class="b2">
+                              <div class="b3">26寸 纯PC“铝框”（非全铝）拉杆箱</div>
+                              <div class="b4">限时价 ¥ 367</div>
+                              <div class="b5">原价¥389</div>
+                              <div class="b6"><a href="detail.html"><span>立即抢购</span></a></div>
+                            </div>
+                      </div>
+                      <div class="item">
+                            <div class="b1"><img src="../img/a1.png"/></div>
+                            <div class="b2">
+                              <div class="b3">日式和风声波式便携电动牙刷</div>
+                              <div class="b4">限时价 ¥ 159</div>
+                              <div class="b5">原价¥199</div>
+                              <div class="b6"><a href="detail.html"><span>立即抢购</span></a></div>
+                            </div>
+                      </div>
+                      <div class="item">
+                            <div class="b1"><img src="../img/a1.png"/></div>
+                            <div class="b2">
+                              <div class="b3">日式和风声波式便携电动牙刷</div>
+                              <div class="b4">限时价 ¥ 159</div>
+                              <div class="b5">原价¥199</div>
+                              <div class="b6"><a href="detail.html"><span>立即抢购</span><a></div>
+                            </div>
+                      </div>
+                    </div>
+                </div>
+                <div class="right">
+                    <div class="b7">
+                        <div class="b7-top"><div class="lt f-fl">量贩囤货</div><span>全部></span></div>
+                        <div class="b7-bottom">
+							<div class="b8"><img src="../img/6.png"/></div>
+							<div class="b9"><div class="b91">严选·颐和园组合茶礼</div><span >¥349</span><i class="cart-salecart"></i></div>
+						</div>
+						 <div class="b7-bottom">
+							<div class="b8"><img src="../img/6.png"/></div>
+							<div class="b9"><div class="b91">26寸 纯PC“铝框”（非全铝）拉杆箱</div><span >¥349</span><i class="cart-salecart"></i></div>
+						</div>
+                    </div>
+					<div class="b7">
+					    <div class="b7-top"><div class="lt f-fl">今日APP价</div><span>全部></span></div>
+					    <div class="b7-bottom">
+							<div class="b8"><img src="../img/6.png"/></div>
+							<div class="b9"><div class="b91">男式轻薄无感运动短裤</div><span >¥349</span><i class="cart-salecart"></i></div>
+						</div>
+						 <div class="b7-bottom">
+							<div class="b8"><img src="../img/6.png"/></div>
+							<div class="b9"><div class="b91">严选·颐和园组合茶礼</div><span >¥349</span><i class="cart-salecart"></i></div>
+						</div>
+					</div>
+                </div>
+ </div>
+     
+                <!-- shopItem -->
+                <div id="shopItem" class="shopItem"></div>
+                <script type="text/html" id="list-template">
+                    <ul class="list-item">
+                        {{ each list item }}
+                        <li>
+                            <a href="/html/detail.html?id={{item.id}}">
+                                <img class="list-imgs" src="{{item.image}}"  data-hover="{{item.hoverImage}}">
+                            </a>
+                            <span></span>
+                            <p>{{item.title}}</p>
+                            <p>￥{{item.price}}</p>
+                        </li>
+                        {{/each}}
+                    </ul>
+                </script>
+            </div>
+        </div>
+    </main>
+    <!-- footer容器 -->
+    <footer id="footer-container"></footer>
+    <script src="/lib/requirejs/require.js" data-main="/js/list.js"></script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+header{
+ul li a {
+	float: left;
+	text-decoration: none;
+	font-size: 14px;
+}
+
+ul li {
+	list-style: none;
+}
+
+.nav {
+	width: 1260px;
+	height: 36px;
+	background: #333333;
+}
+
+.nav .left {
+	width: 680px;
+	height: 36px;
+	float: left;
+}
+
+.nav .right {
+	width: 580px;
+	height: 36px;
+	float: right;
+}
+
+.nav .right ul {
+	width: 580px;
+	height: 36px;
+	float: left;
+	padding-top: 16px;
+
+}
+
+.nav .right ul li {
+	margin-left: 10px;
+	list-style: none;
+	margin-top: -10px;
+}
+
+.nav .right ul li a {
+	float: left;
+	color: #CCC;
+	text-decoration: none;
+	margin-left: 14px;
+}
+
+.nav .right ul li a:hover {
+	color: #ffffff;
+}
+}
