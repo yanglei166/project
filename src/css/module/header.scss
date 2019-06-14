@@ -1,4 +1,6 @@
 header{
+
+
 ul li a {
 	float: left;
 	text-decoration: none;
@@ -11,27 +13,51 @@ ul li {
 
 .nav {
 	width: 1260px;
-	height: 36px;
+	height: 42px;
 	background: #333333;
 }
 
 .nav .left {
 	width: 680px;
-	height: 36px;
+	height: 42px;
 	float: left;
 }
+.nav .left .car-btn{
+	margin-left: 50px;
+	width: 80px;
+	height: 42px;
+	line-height: 32px;
+	font-size: 14px;
+	color: #f6f7ef;
+	float: left;
+	}
+	.nav .left .car-btn span{
+		border-radius: 42%;
+width: 24px;
+height: 24px;
+background: #df371d;
+font-size: 25px;
+line-height: 33px;
+text-align: center;
+	}
 
+	.nav .left .car-btn a{
+		float: left;
+		color: #f6f7ef;
+	}
 .nav .right {
 	width: 580px;
 	height: 36px;
 	float: right;
+overflow: hidden;
 }
 
 .nav .right ul {
 	width: 580px;
 	height: 36px;
 	float: left;
-	padding-top: 16px;
+	margin-top: 21px;
+	
 
 }
 

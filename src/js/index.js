@@ -16,7 +16,53 @@ var slideIndex = 0;
 	    dots[slideIndex-1].className += " active";
 	    setTimeout(showSlides, 2000); // 切换时间为 2 秒
 	}
-	
+  
+  let input = document.querySelector('#tx');
+  function addScript(url) {
+      let script = document.createElement('script');
+      script.setAttribute("type", "text/javascript");
+      script.src = url;
+      document.body.appendChild(script);
+  }
+  input.onkeyup = function (e) {
+      let val = this.value;
+      addScript('http://suggestion.baidu.com/su?wd=' + val + '&cb=show');
+  }
+  function show(result) {
+      // console.log(result.s);
+      let arr = result.s;
+      let listWrap = document.querySelector('.list-wrap');
+      let container = document.querySelector('.container');
+      let domStr = '';
+      for (let i = 0; i < arr.length; i++) {
+          domStr += '<li class="list">' + arr[i] + '</li>';
+      }
+      listWrap.innerHTML = domStr;
+      let list = document.querySelectorAll('.list');
+
+      listWrap.addEventListener('click', function (e) {
+          let xhr = new XMLHttpRequest();
+          let url = 'http://www.baidu.com/s?wd='
+          if (e.target.tagName.toUpperCase() == 'LI') {
+              input.value = e.target.textContent;
+              this.innerHTML = null;
+          }
+          addScript(url + input.value);  
+          let scrConts = Array.from(document.querySelectorAll('script'));
+          let s = scrConts.filter(item => {
+              return /http\:\/\/suggestion\.baidu\.com/.test(item.src);
+          });
+          for (let i = 0; i < s.length; i++) {
+              document.body.removeChild(s[i]); 
+          }
+      }, false);
+
+  }
+  
+  
+
+
+
 require(['require.config'], () => {
   require(['url', 'template', "swiper", 'header','footer'], (url, template, Swiper) => {
     // 首页逻辑

@@ -1,5 +1,5 @@
 require(['require.config'], () => {
-  require(['url', 'jquery','cookie'], (url, $) => {
+  require(['url', 'jquery','cookie','header','footer'], (url,template) => {
     class Login {
       constructor () {
         this.usernameInput = $("#username");
@@ -13,14 +13,16 @@ require(['require.config'], () => {
         this.btn.on("click" ,() => {
           let username = this.usernameInput.val(),
               password = this.passwordInput.val();
-          
+         
           $.ajax({
-            url: url.phpBaseUrl + "user/login.php",
+            url: url.phpBaseUrl + "http://localhost:80/a.php",
+           
             type: "post",
             data: {username, password},
             success: data => {
-              if(data.res_code === 1) {
+              if(data.res_message === success) {
                 this.loginSucc(username);
+      
               }
             },
             dataType: 'json'
@@ -36,7 +38,7 @@ require(['require.config'], () => {
         console.log(expires);
         $.cookie('username', username, expires);
         alert('登录成功，即将跳转首页');
-        location.href = "/";
+        location.href = "/index.html";
 
 
       }
@@ -44,3 +46,13 @@ require(['require.config'], () => {
     new Login();
   })
 })
+
+
+$(function() {
+    $.growl({
+      title: "欢迎用户回来",
+      message: "请马上登录吧!"
+    });
+		
+		
+		});

@@ -10,31 +10,50 @@
 </head>
 <body>
     <!-- 轮播图 -->
-	<div class="swiper-container swiper">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide"><img src="/img/carousel/r1.jpg"></div>
-                <div class="swiper-slide"><img src="/img/carousel/r2.jpg"></div>
-                <div class="swiper-slide"><img src="/img/carousel/r3.jpg"></div>
+	<header id="header-container"></header>
+<div class="main">
+	
+    <div class="title">
+        <span>密码登录</span>
+    </div>
+ 
+    <div class="title-msg">
+        <span>请输入登录账户和密码</span>
+    </div>
+ 
+    <form class="login-form" method="post"  action="http://localhost:80/b.php">
+        <!--输入框-->
+        <div class="input-content">
+            <!--autoFocus-->
+            <div>
+                <input type="text" autocomplete="off"
+                       placeholder="用户名" name="username"  id="username" required/>
             </div>
-    </div>
-    <div class="right">
-        <ul>
-            <li>
-                <img src="/img/logo3.png" />
-                <a href="javascript:;">QQ靓号</a>
-            </li>
-            <li><a href="javascript:;">邮箱账号</a></li>
-            <li>简体中文</li>
-            <li><a href="javascript:;">意见反馈</a></li>
-        </ul>
-        <div class="welcome">欢迎注册qq</div>
-        <div class="happy">每一天，乐在沟通<span>免费靓号</span></div>
-        <form>
-            <input type="text" id="username" placeholder="昵称">
-            <input type="text" id="password" placeholder="密码">
-            <div id="submit">立即注册</div>
-        </form>
-    </div>
+ 
+            <div style="margin-top: 16px">
+                <input type="password"
+                       autocomplete="off" placeholder="登录密码" name="password" required maxlength="32"/>
+            </div>
+			
+			<div style="margin-top: 16px">
+			    <input type="password"
+			           autocomplete="off" placeholder="确认登录密码" name="password" required maxlength="32"/>
+			</div>
+			
+        </div>
+ 
+        <!--登入按钮-->
+        <div style="text-align: center">
+            <button type="submit" class="enter-btn" >注册</button>
+        </div>
+ 
+      
+    </form>
+
+ </div>
+<div class="h1"></div>
+      <footer id="footer-container"></footer>
+	   
     <script src="/lib/requirejs/require.js" data-main="/js/register.js"></script>
 </body>
 </html>

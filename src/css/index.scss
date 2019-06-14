@@ -28,12 +28,23 @@ main{
 			border-bottom-left-radius: 19px;
 			border-top-left-radius: 19px;
 			width: 442px;
-			;
+			float:left;
 			height: 38px;
 			margin-top: 28px;
 			border: 1px solid #B4A078;
 			;
 		}
+.yan .container{
+width: 536px;position: relative;height: 100px;float: left; margin-top: 40px;border-radius: 19px;}
+	input{padding: 5px 10px;height: 30px;
+		border: 1px solid #B4A078;
+	}
+
+    #tx{width: 80%;}
+    #btn{width: 15%;height: 43px;border-radius: 19px;}
+    .list-wrap{list-style: none;width: 80%;position: absolute;left: 0;z-index: 1000;margin-top: -2px;}
+    .list-wrap li{height: 30px;line-height: 30px;padding: 0 10px;}
+    .list-wrap li:hover{background-color: #eee;cursor: pointer;}
 
 		.yan .right .searchButton {
 			width: 90px;
@@ -65,7 +76,7 @@ main{
 			height: 38px;
 			border: 1px solid #B4A078;
 			border-radius: 19px;
-			margin-top: 30px;
+			margin-top: 42px;
 			margin-left: 70px;
 			background: url(../../img/spirt.png) no-repeat 10px 6px;
 		}
@@ -82,6 +93,7 @@ main{
 		.nav2 {
 			width: 1260px;
 			height: 40px;
+			margin-top: 32px;
 		}
 
 		.nav2 ul {
@@ -104,13 +116,13 @@ main{
 			border-bottom: 2px solid #B4A078;
 		}
  .lun{
-	 width: 1263px;height: 264px;  background:#ffe4c7;
+	 width: 1263px;height: 300px;  
 	 * {box-sizing:border-box}
 body {font-family: Verdana,sans-serif;}
 .mySlides {display:none}
 /* 幻灯片容器 */
 .slideshow-container {
-  max-width: 1000px;
+  max-width: 1254px;
   position: relative;
   margin: auto;
   height: 220px;

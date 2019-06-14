@@ -1,5 +1,5 @@
 require(['require.config'], () => {
-  require(['url', 'header'], (url) => {
+  require(['url', 'header','footer'], (url) => {
     class Register {
       constructor () {
         this.usernameInput = $("#username");
@@ -11,10 +11,10 @@ require(['require.config'], () => {
       bindEvents () {
         this.btn.on("click", () => {
           // 取用户名和密码提交后台
-          let username = this.usernameInput.val(),
+          let username = this.usernameInput.val(), 
               password = this.passwordInput.val();
           $.ajax({
-            url: url.phpBaseUrl + "user/register.php",
+            url: url.phpBaseUrl + "http://localhost:80/b.php",
             type: "post",
             data: {username, password},
             success: data => {
